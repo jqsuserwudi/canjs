@@ -1,9 +1,6 @@
-const Canjs = require('./src')
+//simple demo
 
-try {
-  global.Canjs = Canjs
-} catch (e) {}
+let Dynamic = require('VMBase/VMDynamic')
 
-try {
-  window.Canjs = Canjs
-} catch (e) {}
+let vmo = new Dynamic("js code", window.SCRIPT_CONTEXT || {});
+vmo.run();
